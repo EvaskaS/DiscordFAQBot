@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Threading.Tasks;
+using Discord.Net;
 
 namespace FAQ_Bot
 {
@@ -13,4 +15,4 @@ namespace FAQ_Bot
             }
         }
     }
-}
+
