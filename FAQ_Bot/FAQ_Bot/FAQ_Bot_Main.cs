@@ -26,7 +26,7 @@ namespace FAQ_Bot
             // Internet or by using other methods such as reading from 
             // a configuration.
             await _client.LoginAsync(TokenType.Bot,
-                Environment.GetEnvironmentVariable("DiscordToken"));
+                Environment.GetEnvironmentVariable("Discord Token"));
             await _client.StartAsync();
 
             // Block this task until the program is closed.
