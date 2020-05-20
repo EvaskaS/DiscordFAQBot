@@ -25,7 +25,7 @@ namespace FAQ_Bot
             faqList.Add("2.) Are there any screenshots of the site? ");
             faqList.Add("2A: There are currently no screenshots of the site yet. We have not yet decided on a UI or theme or anything. The main focus currently is functionality and security.");
             faqList.Add("3.) How many themes will there be? Will the theme be easy to read? Do you have an example or mockups of the UI? ");
-            faqList.Add("1A: As ArtSpacious is still in the early development stages, we do not have a definitive answer for this yet. We will however be ensuring that our themes and site are accesible to as many people as possible.");
+            faqList.Add("3A: As ArtSpacious is still in the early development stages, we do not have a definitive answer for this yet. We will however be ensuring that our themes and site are accesible to as many people as possible.");
             _client = new DiscordSocketClient();
 
             _client.Log += Log;
@@ -46,9 +46,12 @@ namespace FAQ_Bot
 
         private async Task MessageRecieved(SocketMessage message)
         {
-            if(message.Content == "!FAQ")
+            if(message.Content == "!FAQ" || message.Content == "!faq")
             {
-                await message.Channel.SendMessageAsync("List goes here");
+                foreach(String fq in faqList) { 
+                await message.Channel.SendMessageAsync(fq);
+
+                }
             }
         }
 
