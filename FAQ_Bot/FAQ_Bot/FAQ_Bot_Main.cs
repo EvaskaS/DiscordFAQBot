@@ -28,9 +28,17 @@ namespace FAQ_Bot
             await _client.LoginAsync(TokenType.Bot,
                 "Discord Token");
             await _client.StartAsync();
-
+            _client.MessageReceived += MessageRecieved;
             // Block this task until the program is closed.
             await Task.Delay(-1);
+        }
+
+        private async Task MessageRecieved(SocketMessage message)
+        {
+            if(message.Content == "!FAQ")
+            {
+                await message.Channel.SendMessageAsync("List goes here");
+            }
         }
 
         private Task Log(LogMessage msg)
