@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Discord;
 using Discord.WebSocket;
+using FAQ_Bot.Repositories;
 
 namespace FAQ_Bot
 {
@@ -12,7 +13,7 @@ namespace FAQ_Bot
         
             => new FAQ_Bot_Main().MainAsync().GetAwaiter().GetResult();
 
-            List<String> faqList = new List<String>();
+        FAQList fqList = new FAQList();
         
 
         private DiscordSocketClient _client;
@@ -44,8 +45,10 @@ namespace FAQ_Bot
         {
             if(message.Content == "!FAQ" || message.Content == "!faq")
             {
-                foreach(String fq in faqList) { 
-                await message.Channel.SendMessageAsync(fq);
+                List<String> response = fqList.GenerateList();
+
+                foreach(String item in response) { 
+                await message.Channel.SendMessageAsync(item);
 
                 }
             }
