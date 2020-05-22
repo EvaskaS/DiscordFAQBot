@@ -338,3 +338,5 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+
+/FAQ_Bot/FAQ_Bot/Token/botToken.cs

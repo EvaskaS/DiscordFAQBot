@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Discord;
 using Discord.WebSocket;
 using FAQ_Bot.Repositories;
+using FAQ_Bot.Token;
 
 namespace FAQ_Bot
 {
@@ -14,6 +15,7 @@ namespace FAQ_Bot
             => new FAQ_Bot_Main().MainAsync().GetAwaiter().GetResult();
 
         FAQList fqList = new FAQList();
+        botToken token = new botToken();
         
 
         private DiscordSocketClient _client;
@@ -34,7 +36,7 @@ namespace FAQ_Bot
             // Internet or by using other methods such as reading from 
             // a configuration.
             await _client.LoginAsync(TokenType.Bot,
-                "Discord Token");
+                token.getToken());
             await _client.StartAsync();
             _client.MessageReceived += MessageRecieved;
             // Block this task until the program is closed.
