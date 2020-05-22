@@ -15,7 +15,7 @@ namespace FAQ_Bot
             => new FAQ_Bot_Main().MainAsync().GetAwaiter().GetResult();
 
         FAQList fqList = new FAQList();
-        botToken token = new botToken();
+        BotToken token = new BotToken();
         
 
         private DiscordSocketClient _client;
@@ -36,7 +36,7 @@ namespace FAQ_Bot
             // Internet or by using other methods such as reading from 
             // a configuration.
             await _client.LoginAsync(TokenType.Bot,
-                token.getToken());
+                token.DiscordToken);
             await _client.StartAsync();
             _client.MessageReceived += MessageRecieved;
             // Block this task until the program is closed.
@@ -47,10 +47,10 @@ namespace FAQ_Bot
         {
             if(message.Content == "!FAQ" || message.Content == "!faq")
             {
-                List<String> response = fqList.ReturnList();
+                List<string> response = fqList.ReturnList();
                 
                // foreach(String item in response) { 
-                await message.Channel.SendMessageAsync(String.Concat(response));
+                await message.Channel.SendMessageAsync(string.Concat(response));
 
                 //
             }
