@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace FAQ_Bot.Repositories
@@ -33,9 +34,8 @@ namespace FAQ_Bot.Repositories
 
         }
 
-            public List<string> ReturnList()
+        public List<string> ReturnList()
         {
-           
             return faqList;
         }
     }

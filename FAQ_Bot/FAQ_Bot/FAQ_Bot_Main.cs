@@ -47,12 +47,13 @@ namespace FAQ_Bot
         {
             if(message.Content == "!FAQ" || message.Content == "!faq")
             {
-                List<string> response = fqList.ReturnList();
-                
-               // foreach(String item in response) { 
-                await message.Channel.SendMessageAsync(string.Concat(response));
 
-                //
+                List<string> response = fqList.ReturnList();
+                foreach (String item in response)
+                {
+                    await message.Channel.SendMessageAsync(item);
+
+                }
             }
         }
 
