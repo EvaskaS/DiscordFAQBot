@@ -12,8 +12,9 @@ namespace FAQ_Bot.Repositories
         public FAQList()
         {
             //FAQ List
+            faqList.Add("``` Please give the bot 3 seconds to load all questions after pinging the system.```");
             faqList.Add("> Please review this journal: https://www.deviantart.com/artspacious/journal/Feature-Requests-and-FAQ-839151383. " + Environment.NewLine +
-                "Below you will find questions that have already been asked in this server. " + Environment.NewLine + Environment.NewLine);
+                "> Below you will find questions that have already been asked in this server. " + Environment.NewLine + Environment.NewLine);
             faqList.Add("> **1.) Is the site ready/open yet? **" + Environment.NewLine +
                 "Answer: ArtSpacious is not open yet.The project was started on April 20th, 2020.We do not yet have an estimated date for when the site will be ready." + Environment.NewLine + Environment.NewLine);
             faqList.Add("> **2.) Are there any screenshots of the site? **" + Environment.NewLine +
@@ -22,7 +23,7 @@ namespace FAQ_Bot.Repositories
                 "Answer: As ArtSpacious is still in the early development stages, we do not have a definitive answer for this yet. We will however be ensuring that our themes and site are accesible to as many people as possible." + Environment.NewLine + Environment.NewLine);
             faqList.Add("> **4.) Will the new website still have the comment sections be the same as it was in the original DA?**" + Environment.NewLine +
                 "Answer: We can't say whether they will be identical to DA's comments, but we can say that we will most certainly have comments and they will be optimized as we feel they can be for AS." + Environment.NewLine + Environment.NewLine);
-            faqList.Add("> **5.) Will we beable to remove our comments section?**" + Environment.NewLine +
+            faqList.Add("> **5.) Will we be able to remove our comments section?**" + Environment.NewLine +
                 "Answer: We do intend to allow members to customize their profiles fully -- including elements like comments. So yes, you, you should be able to remove your comments section on your profile if you dislike it, as well as disable comments in journals/submissions like normal!" + Environment.NewLine + Environment.NewLine);
             faqList.Add("> **6.) Will there be settings to help with colourblindness?**" + Environment.NewLine +
                 "Answer: Yes, ArtSpacious will be designed for the colourblind, and non-colourblind members. ArtSpacious will have a layout friendly in all aspects/colouration and layout settings for individuals with colourblindness. In fact AS's lead developer is colourblind!" + Environment.NewLine + Environment.NewLine);
